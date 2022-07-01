@@ -12,7 +12,7 @@ const Home = () => {
             title:event.target[0].value
         }
 
-        fetch('http://localhost:5000/info',{
+        fetch('https://true-marks-29521.herokuapp.com/info',{
             method:'POST',
             headers:{
                 'content-type':'application/json'
@@ -29,7 +29,7 @@ const Home = () => {
          <div className='card-body items-center text-center'>
             <h1>Your Daily Task</h1>
     <form onSubmit={handleSubmit}>     
-      <input type="text" placeholder="Type here" class="input input-bordered w-80 max-w-xs" /> 
+      <input type="text" placeholder="Type here" className="input input-bordered w-80 max-w-xs" /> 
        <br />
        <input type="submit" className='btn btn-active btn-ghost mt-3' value="Add" />
     </form>

@@ -8,8 +8,6 @@ const ToDo = () => {
     const [checked, setChecked] = useState([]);
     const completeList = [location.state];
    
-
-  // Add/Remove checked item from list
   const handleCheck = (event) => {
     let updatedList = [...checked];
     if (event.target.checked) {
@@ -18,18 +16,14 @@ const ToDo = () => {
       updatedList.splice(checked.indexOf(event.target.value), 1);
     }
     setChecked(updatedList);
-   
   };
 
-  // Generate string of checked items
   const completedItems = checked.length ? checked.reduce((total, item) => {
     navigate('/completedtasks')
         return total + ", " + item;   
       })
     : "";
   
-
-  // Return classes based on whether item is checked
   let isChecked = (item) =>
     checked.includes(item) ? "checked-item" : "not-checked-item";
     
@@ -37,7 +31,6 @@ const ToDo = () => {
     
     return (
          <div className='card-body items-center text-center'>
-            
            <div>
         <div className="title text-bold">Your Task:</div>
         <div>
@@ -45,7 +38,6 @@ const ToDo = () => {
             <div key={index}>
               <input value={item} type="checkbox" onChange={handleCheck} />
               <span className={isChecked(item)}>{item}</span>
-              
             </div>
           ))}
         </div>
@@ -54,7 +46,7 @@ const ToDo = () => {
       <div>
         {`Completed task: ${completedItems}`}
       </div>
-        </div>
+    </div>
     );
 };
 

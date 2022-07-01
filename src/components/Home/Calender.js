@@ -7,7 +7,6 @@ const Calender = () => {
     return (
         <div className='card-body items-center text-center'>
             <Calendar onChange={onChange} value={value} />
-
         </div>
     );
 };
