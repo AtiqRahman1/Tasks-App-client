@@ -9,8 +9,7 @@ const Home = () => {
         event.preventDefault();
         console.log(event.target[0].value)
         const info= {
-            titleId:'_id',
-            title:'title'
+            title:event.target[0].value
         }
 
         fetch('http://localhost:5000/info',{
