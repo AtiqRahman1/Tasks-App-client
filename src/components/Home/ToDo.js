@@ -5,9 +5,8 @@ import { useLocation } from 'react-router-dom';
 const ToDo = () => {
     const location= useLocation([]);
     console.log(location.state);
-
     const [checked, setChecked] = useState([]);
-  const completeList = [location.state];
+    const completeList = [location.state];
 
   // Add/Remove checked item from list
   const handleCheck = (event) => {
